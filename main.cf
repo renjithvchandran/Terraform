@@ -1,0 +1,25 @@
+provider "google" {
+  project = "phrasal-insight-237905"
+  region  = "us-central1"
+  credentials = "${file("phrasal-insight-237905-5cf640c66018.json")}"
+}
+
+resource "google_compute_instance" "vm_instance" {
+  name         = "testserver"
+  count        = "2"
+  machine_type = "f1-micro"
+  zone = "us-central1-b"
+
+  boot_disk {
+    initialize_params {
+      image = "sles-15-v20190520"
+    }
+  }
+
+network_interface {
+    # A default network is created for all GCP projects
+    network       = "default"
+    access_config = {
+    }
+  }
+}
