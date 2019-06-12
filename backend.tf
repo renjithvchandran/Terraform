@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "<your-project-id>-tfstate"
+    bucket = "phrasal-insight-237905-tfstate"
     credentials = "./creds/serviceaccount.json"
   }
 }
