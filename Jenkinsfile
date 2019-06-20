@@ -6,7 +6,7 @@ pipeline {
     }
   }    
   environment {
-    SVC_ACCOUNT_KEY = credentials('terraform-auth')
+    SVC_ACCOUNT_KEY = credentials('myproject')
   }
 
   stages {
