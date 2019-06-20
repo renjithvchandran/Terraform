@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket      = "gke-tf-demo-tfstate"
+    bucket      = "phrasal-insight-237905-tfstate"
    
   }
 }
