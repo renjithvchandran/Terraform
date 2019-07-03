@@ -14,6 +14,11 @@ pipeline {
         sh 'terraform plan -out myplan'
       }
     }
+    stage('TF apply') {
+      steps {
+        sh 'terraform apply -input=false myplan'
+      }
+    }
   }
   environment {
     SVC_ACCOUNT_KEY = 'credentials(\'GCP-USER\')'
