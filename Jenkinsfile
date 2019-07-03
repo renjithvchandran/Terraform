@@ -10,13 +10,15 @@ pipeline {
     }
     stage('TF Plan') {
       steps {
-        sh 'terraform init'
-        sh 'terraform plan -out myplan'
+        container('terraform') {
+          sh 'terraform init'
+          sh 'terraform plan -out myplan'
       }
     }
     stage('TF apply') {
       steps {
-        sh 'terraform apply -input=false myplan'
+        container('terraform') {
+          sh 'terraform apply -input=false myplan'
       }
     }
   }
