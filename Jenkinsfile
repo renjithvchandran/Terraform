@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('stage') {
       steps {
-        sh 'pwd'
-        sh 'ls -ltr'
+        sh 'terraform init'
+        sh 'terraform plan -out myplan'
       }
     }
   }
