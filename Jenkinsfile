@@ -22,6 +22,6 @@ pipeline {
     }
   }
   environment {
-    GOOGLE_CREDENTIALS = credentials('GCP-USR')
+    GOOGLE_CREDENTIALS = credentials('GCP-USER')
   }
 }
