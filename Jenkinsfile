@@ -14,6 +14,7 @@ pipeline {
     }
     stage('plan') {
       steps {
+        sh 'pwd'
         sh 'terraform init'
         sh 'terraform plan -out myplan'
       }
