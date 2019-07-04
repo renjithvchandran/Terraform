@@ -10,8 +10,6 @@ pipeline {
       steps {
         sh 'mkdir -p myterraform'
         sh 'echo $GOOGLE_CREDENTIALS > ./myterraform/keyfile.json'
-        sh '''cd ./myterraform
-ls -ltr'''
       }
     }
     stage('plan') {
