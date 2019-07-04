@@ -9,6 +9,7 @@ pipeline {
     stage('stage') {
       steps {
         sh 'pwd'
+        sh 'ls -ltr'
       }
     }
   }
