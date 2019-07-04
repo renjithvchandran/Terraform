@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
+        checkout scm
         sh 'mkdir -p myterraform'
         sh 'echo $GOOGLE_CREDENTIALS > keyfile.json'
       }
