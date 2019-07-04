@@ -12,6 +12,8 @@ pipeline {
         sh 'mkdir -p myterraform'
         sh 'echo $GOOGLE_CREDENTIALS > keyfile.json'
         sh 'cat keyfile.json'
+        sh 'pwd'
+        sh 'ls -ltr'
       }
     }
     stage('plan') {
