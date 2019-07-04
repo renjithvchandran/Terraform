@@ -19,6 +19,11 @@ pipeline {
         sh 'terraform plan -out myplan'
       }
     }
+    stage('apply') {
+      steps {
+        sh 'terraform apply -input=false myplan'
+      }
+    }
   }
   environment {
     GOOGLE_CREDENTIALS = credentials('GCP-USER')
