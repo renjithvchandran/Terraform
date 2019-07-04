@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "${file("./myterraform/keyfile.json")}"
+  credentials = "${file("keyfile.json")}"
   project     = "kube-test-245509"
   region      = "europe-west1"
 }
