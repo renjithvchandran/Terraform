@@ -9,9 +9,8 @@ pipeline {
     stage('checkout') {
       steps {
         checkout scm
-        withCredentials([[$class: 'FileBinding', credentialsId: "GCP-USR", variable: 'GOOGLE_CREDENTIALS']])
         sh 'mkdir -p myterraform'
-        sh 'echo $GOOGLE_CREDENTIALS > keyfile.json'
+        sh 'echo $GOOGLE_CREDENTIALS | base64 -d > keyfile.json'
         sh 'cat keyfile.json'
         sh 'pwd'
         sh 'ls -ltr'
@@ -26,6 +25,6 @@ pipeline {
     }
   }
   environment {
-    GOOGLE_CREDENTIALS = credentials('GCP-USR')
+    GOOGLE_CREDENTIALS = credentials('GCP-USER')
   }
 }
