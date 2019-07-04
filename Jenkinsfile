@@ -20,7 +20,7 @@ pipeline {
     }
     stage('apply') {
       steps {
-        sh 'terraform destroy "myplan"'
+        sh 'terraform apply "myplan"'
       }
     }
   }
