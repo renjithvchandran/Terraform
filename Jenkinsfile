@@ -14,14 +14,13 @@ pipeline {
     }
     stage('plan') {
       steps {
-        sh 'rm -f terraform.tfstate'
         sh 'terraform init'
         sh 'terraform plan -out myplan'
       }
     }
     stage('apply') {
       steps {
-        sh 'terraform apply "myplan"'
+        sh 'terraform destroy "myplan"'
       }
     }
   }
