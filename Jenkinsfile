@@ -20,7 +20,7 @@ pipeline {
     }
     stage('apply') {
       steps {
-        sh 'terraform apply "myplan"'
+        sh 'terraform apply -input=false "myplan"'
       }
     }
   }
