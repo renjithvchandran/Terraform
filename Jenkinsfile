@@ -9,11 +9,7 @@ pipeline {
     stage('checkout') {
       steps {
         checkout scm
-        sh 'mkdir -p myterraform'
         sh 'echo $GOOGLE_CREDENTIALS | base64 -d > keyfile.json'
-        sh 'cat keyfile.json'
-        sh 'pwd'
-        sh 'ls -ltr'
       }
     }
     stage('plan') {
