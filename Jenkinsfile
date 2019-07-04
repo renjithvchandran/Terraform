@@ -9,7 +9,7 @@ pipeline {
     stage('checkout') {
       steps {
         sh 'mkdir -p myterraform'
-        sh 'echo $GOOGLE_CREDENTIALS'
+        sh 'echo $GOOGLE_CREDENTIALS > ./myterraform/keyfile.json'
       }
     }
     stage('plan') {
