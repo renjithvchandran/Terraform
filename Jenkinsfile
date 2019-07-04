@@ -10,7 +10,7 @@ pipeline {
       steps {
         checkout scm
         sh 'mkdir -p myterraform'
-        sh 'echo $GOOGLE_CREDENTIALS > keyfile.json'
+        sh 'echo $GOOGLE_CREDENTIALS'
       }
     }
     stage('plan') {
