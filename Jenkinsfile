@@ -14,6 +14,7 @@ pipeline {
     }
     stage('plan') {
       steps {
+        sh 'rm -f terraform.tfstate'
         sh 'terraform init'
         sh 'terraform plan -out myplan'
       }
