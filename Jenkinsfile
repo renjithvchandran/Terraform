@@ -22,7 +22,7 @@ pipeline {
       steps {
         sh 'terraform apply "myplan"'
         sh 'sleep 30'
-        sh 'terraform destroy -auto-approve"
+        sh 'terraform destroy -auto-approve'
       }
     }
   }
