@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        checkout scm
         sh 'echo $GOOGLE_CREDENTIALS | base64 -d > keyfile.json'
       }
     }
@@ -21,8 +20,6 @@ pipeline {
     stage('apply') {
       steps {
         sh 'terraform apply "myplan"'
-        sh 'sleep 30'
-        sh 'terraform destroy -auto-approve'
       }
     }
   }
