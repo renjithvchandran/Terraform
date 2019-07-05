@@ -21,6 +21,8 @@ pipeline {
     stage('apply') {
       steps {
         sh 'terraform apply "myplan"'
+        sh 'sleep 30'
+        sh 'terraform destroy -auto-approve"
       }
     }
   }
