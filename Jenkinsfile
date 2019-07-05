@@ -20,7 +20,7 @@ pipeline {
     }
     stage('apply') {
       steps {
-        sh 'terraform destroy -auto-approve -target=google_container_cluster'
+        sh 'terraform destroy -auto-approve'
       }
     }
   }
