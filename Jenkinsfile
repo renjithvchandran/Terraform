@@ -20,7 +20,7 @@ pipeline {
     }
     stage('apply') {
       steps {
-        sh 'terraform destroy-auto-approve -target=yplan'
+        sh 'terraform destroy -auto-approve -target=yplan'
       }
     }
   }
