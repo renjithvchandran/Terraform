@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "kube-test-245509-tfstate"
+    bucket = "cicd-project-277705-tfstate"
     credentials = "keyfile.json"
   }
 }
