@@ -30,6 +30,6 @@ pipeline {
     }
   }
   environment {
-    GOOGLE_CREDENTIALS = credentials('CICD-Project')
+    GOOGLE_CREDENTIALS = credentials('GCP-USER')
   }
 }
