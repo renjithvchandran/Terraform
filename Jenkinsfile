@@ -10,6 +10,10 @@ pipeline {
     GOOGLE_CREDENTIALS = credentials('GCP-USER')
   }
   
+  tools {
+  terraform 'Terraform'
+ }
+  
   stages {
     stage('checkout') {
       steps {
