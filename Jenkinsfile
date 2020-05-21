@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        sh 'echo ${GOOGLE_CREDENTIALS} | base64 -d > keyfile.json'
+        sh 'echo $GOOGLE_CREDENTIALS
+        sh 'echo $GOOGLE_CREDENTIALS | base64 -d > keyfile.json'
       }
     }
     stage('plan') {
