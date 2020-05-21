@@ -3,8 +3,13 @@ pipeline {
     node {
       label 'master'
     }
-
+    
   }
+  
+  environment {
+    GOOGLE_CREDENTIALS = credentials('GCP-USER')
+  }
+  
   stages {
     stage('checkout') {
       steps {
@@ -30,7 +35,5 @@ pipeline {
       }
     }
   }
-  environment {
-    GOOGLE_CREDENTIALS = credentials('GCP-USER')
-  }
+  
 }
