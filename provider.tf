@@ -1,5 +1,5 @@
 provider "google" {
   credentials = "${file("keyfile.json")}"
-  project     = "kube-test-245509"
-  region      = "europe-west1"
+  project     = "cicd-project-277705"
+  region      = "us-central1-a"
 }
