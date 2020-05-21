@@ -1,6 +1,6 @@
 resource "google_container_cluster" "gke-cluster"{
   name               = "my-kube-test"
   network            = "default"
-  location           = "europe-west1-b"
+  location           = "us-central1-a"
   initial_node_count = 3
 }
